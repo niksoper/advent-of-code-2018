@@ -1,7 +1,5 @@
-const fs = require('fs')
+const readFile = require('../input').readInput
 
 module.exports = {
-  readInput: () => fs.readFileSync('./input.txt', 'utf8')
-    .split('\n')
-    .map(line => +line)
+  readInput: () => readFile('./input.txt').map(line => +line)
 }
